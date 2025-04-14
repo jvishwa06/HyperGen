@@ -1,0 +1,11 @@
+torch
+torchvision
+opencv-python
+Pillow
+easyocr
+diffusers
+transformers
+accelerate
+gradio
+numpy
+matplotlib
