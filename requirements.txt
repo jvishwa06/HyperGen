@@ -9,3 +9,5 @@ accelerate
 gradio
 numpy
 matplotlib
+qwen_vl_utils
+langchain_ollama
