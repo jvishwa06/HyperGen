@@ -9,15 +9,6 @@ from datetime import datetime, timedelta
 
 
 def load_image(image_path):
-    """
-    Load the image and prepare it for processing.
-    
-    Args:
-        image_path: Path to the image file
-        
-    Returns:
-        Tuple containing (cv2 image, image height, image width)
-    """
     image_cv = cv2.imread(image_path)
     if image_cv is None:
         raise FileNotFoundError(f"Image not found at {image_path}")
@@ -28,22 +19,11 @@ def load_image(image_path):
 
 
 def initialize_ocr():
-    """Initialize the OCR reader."""
     print("Initializing OCR reader...")
     return easyocr.Reader(['en'], gpu=False)
 
 
 def detect_name_field(results, image_height):
-    """
-    Detect the name field in the OCR results.
-    
-    Args:
-        results: OCR results from easyocr
-        image_height: Height of the image
-        
-    Returns:
-        Tuple containing (name_bbox, name_text)
-    """
     name_bbox = None
     name_text = None
     
@@ -83,15 +63,6 @@ def detect_name_field(results, image_height):
 
 
 def detect_dob_field(results):
-    """
-    Detect the date of birth field in the OCR results.
-    
-    Args:
-        results: OCR results from easyocr
-        
-    Returns:
-        Tuple containing (dob_bbox, dob_text)
-    """
     dob_bbox = None
     dob_text = None
     date_pattern = r'\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4}'
@@ -184,15 +155,6 @@ def detect_dob_field(results):
 
 
 def detect_aadhar_number(results):
-    """
-    Detect the Aadhar number field in the OCR results.
-    
-    Args:
-        results: OCR results from easyocr
-        
-    Returns:
-        Tuple containing (aadhar_bbox, aadhar_text)
-    """
     aadhar_bbox = None
     aadhar_text = None
     
@@ -211,12 +173,6 @@ def detect_aadhar_number(results):
 
 
 def get_system_font():
-    """
-    Get a suitable system font for use, with fallbacks.
-    
-    Returns:
-        Font path or None if no suitable font is found
-    """
     font_path = "/System/Library/Fonts/Helvetica.ttc"
     if not os.path.exists(font_path):
         font_path = "/Library/Fonts/Arial.ttf"
@@ -230,20 +186,6 @@ def get_system_font():
 
 
 def adjust_font_size(draw, text, max_width, font_path, initial_size, min_size=10):
-    """
-    Adjust font size to fit text within a given width.
-    
-    Args:
-        draw: PIL ImageDraw object
-        text: Text to fit
-        max_width: Maximum width in pixels
-        font_path: Path to the font file
-        initial_size: Initial font size to try
-        min_size: Minimum allowable font size
-        
-    Returns:
-        Tuple of (adjusted font, text width, text height)
-    """
     font_size = initial_size
     font = None
     text_width = 0
@@ -284,19 +226,6 @@ def adjust_font_size(draw, text, max_width, font_path, initial_size, min_size=10
 
 
 def modify_name(draw, name_bbox, original_name, new_name, font_path):
-    """
-    Modify the name field in the image.
-    
-    Args:
-        draw: PIL ImageDraw object
-        name_bbox: Bounding box coordinates for the name
-        original_name: Original detected name text
-        new_name: New name to insert
-        font_path: Path to the font file
-        
-    Returns:
-        The font used (for potential reuse)
-    """
     if not name_bbox:
         print("No name bbox provided, skipping name modification")
         return None
@@ -323,17 +252,6 @@ def modify_name(draw, name_bbox, original_name, new_name, font_path):
 
 
 def modify_dob(draw, dob_bbox, original_dob, new_dob, font_path, fallback_font=None):
-    """
-    Modify the date of birth field in the image.
-    
-    Args:
-        draw: PIL ImageDraw object
-        dob_bbox: Bounding box coordinates for the DOB
-        original_dob: Original detected DOB text
-        new_dob: New DOB to insert
-        font_path: Path to the font file
-        fallback_font: A font to use if the specified font fails to load
-    """
     if not dob_bbox:
         print("No DOB bbox provided, skipping DOB modification")
         return
@@ -368,17 +286,6 @@ def modify_dob(draw, dob_bbox, original_dob, new_dob, font_path, fallback_font=N
 
 
 def modify_aadhar_number(draw, aadhar_bbox, original_aadhar, new_aadhar, font_path, fallback_font=None):
-    """
-    Modify the Aadhar number field in the image.
-    
-    Args:
-        draw: PIL ImageDraw object
-        aadhar_bbox: Bounding box coordinates for the Aadhar number
-        original_aadhar: Original detected Aadhar number
-        new_aadhar: New Aadhar number to insert
-        font_path: Path to the font file
-        fallback_font: A font to use if the specified font fails to load
-    """
     if not aadhar_bbox:
         print("No Aadhar number bbox provided, skipping Aadhar modification")
         return
@@ -410,18 +317,6 @@ def modify_aadhar_number(draw, aadhar_bbox, original_aadhar, new_aadhar, font_pa
 
 
 def save_and_display_image(image_pil, output_path="aadharcard_modified.jpg", apply_blur_effect=False, blur_strength=2):
-    """
-    Convert PIL image back to CV2 format and save.
-    
-    Args:
-        image_pil: PIL Image object
-        output_path: Path where to save the modified image
-        apply_blur_effect: Whether to apply a blur effect
-        blur_strength: Strength of the blur effect (1-5)
-        
-    Returns:
-        Path to the saved image
-    """
     if apply_blur_effect:
         image_pil = apply_blur(image_pil, blur_strength)
     
@@ -434,12 +329,6 @@ def save_and_display_image(image_pil, output_path="aadharcard_modified.jpg", app
 
 
 def generate_random_name():
-    """
-    Generate a random Indian name.
-    
-    Returns:
-        A randomly generated name
-    """
     first_names = ["Rahul", "Amit", "Vijay", "Suresh", "Raj", "Anil", "Rakesh", "Ramesh", 
                   "Priya", "Neha", "Pooja", "Sunita", "Anjali", "Meena", "Kavita", "Sanjay", 
                   "Vikram", "Deepak", "Rajesh", "Ravi", "Sunil", "Manoj"]
@@ -451,12 +340,6 @@ def generate_random_name():
 
 
 def generate_random_dob():
-    """
-    Generate a random date of birth (between 18 and 60 years ago).
-    
-    Returns:
-        A random date in DD/MM/YYYY format
-    """
     today = datetime.now()
     min_age = 18
     max_age = 60
@@ -468,12 +351,6 @@ def generate_random_dob():
 
 
 def generate_random_aadhar():
-    """
-    Generate a random 12-digit Aadhar number with proper spacing.
-    
-    Returns:
-        A random Aadhar number in XXXX XXXX XXXX format
-    """
     digits = [str(random.randint(0, 9)) for _ in range(12)]
     
     aadhar = ''.join(digits[:4]) + ' ' + ''.join(digits[4:8]) + ' ' + ''.join(digits[8:12])
@@ -482,16 +359,6 @@ def generate_random_aadhar():
 
 
 def apply_blur(image_pil, blur_strength=2.0):
-    """
-    Apply a Gaussian blur effect to the image.
-    
-    Args:
-        image_pil: PIL Image object
-        blur_strength: Strength of the blur effect (0.5-5.0, in 0.5 increments)
-        
-    Returns:
-        Blurred PIL Image object
-    """
     blur_strength = max(0.5, min(5.0, float(blur_strength)))
     
     blurred_image = image_pil.filter(ImageFilter.GaussianBlur(radius=blur_strength))
@@ -501,21 +368,6 @@ def apply_blur(image_pil, blur_strength=2.0):
 
 
 def main(image_path, new_name=None, new_dob=None, new_aadhar=None, output_path="aadharcard_modified.jpg", apply_blur_effect=False, blur_strength=2):
-    """
-    Main function that orchestrates the Aadhar card modification process.
-    
-    Args:
-        image_path: Path to the original image
-        new_name: New name to be inserted (if None, will be randomly generated)
-        new_dob: New date of birth to be inserted (if None, will be randomly generated)
-        new_aadhar: New Aadhar number to be inserted (if None, will be randomly generated)
-        output_path: Path where to save the modified image
-        apply_blur_effect: Whether to apply a blur effect to the final image
-        blur_strength: Strength of the blur effect (1-5)
-        
-    Returns:
-        Path to the saved image
-    """
     image_cv, image_height, image_width = load_image(image_path)
     reader = initialize_ocr()
     
@@ -555,12 +407,3 @@ def main(image_path, new_name=None, new_dob=None, new_aadhar=None, output_path="
     modify_dob(draw, dob_bbox, dob_text, new_dob, font_path, fallback_font)
     modify_aadhar_number(draw, aadhar_bbox, aadhar_text, new_aadhar, font_path, fallback_font)
     return save_and_display_image(image_pil, output_path, apply_blur_effect, blur_strength)
-
-
-if __name__ == "__main__":
-    IMAGE_PATH = 'original.jpg'
-    NEW_NAME = "Vijay Kumar"  
-    NEW_DOB = "18/09/1999"  
-    NEW_AADHAR = "4276 5933 7812"
-    
-    main(IMAGE_PATH, NEW_NAME, NEW_DOB, NEW_AADHAR)

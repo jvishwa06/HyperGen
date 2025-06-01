@@ -1,0 +1,16 @@
+[project]
+name = "hypergen-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "diffusers>=0.33.1",
+    "easyocr>=1.7.2",
+    "gradio>=5.31.0",
+    "opencv-python>=4.11.0.86",
+    "qwen-vl-utils>=0.0.11",
+    "streamlit>=1.45.1",
+    "torch>=2.7.0",
+    "transformers>=4.52.3",
+]

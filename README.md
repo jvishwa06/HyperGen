@@ -47,8 +47,8 @@ The web interface will be accessible at http://localhost:7860 by default.
 HyperGen/
 ├── src/
 │   ├── main.py       # Main application code with Gradio UI
-│   ├── cvbased.py    # Computer vision based editing implementation
-│   ├── aibased.py    # AI-based generation using diffusion models
+│   ├── cvprocessor.py    # Computer vision based editing implementation
+│   ├── aiprocessor.py    # AI-based generation using diffusion models
 ├── aadharcardData/   # Reference Aadhar card templates and samples
 ├── ImageGenResults/  # Sample outputs from different generation methods
 ├── requirements.txt  # Project dependencies

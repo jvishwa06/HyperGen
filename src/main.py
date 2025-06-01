@@ -1,19 +1,10 @@
 import os
 import re
 import gradio as gr
-from cvbased import main as edit_aadhar
-from aibased import generate_aadhar_image
+from cvprocessor import main as edit_aadhar
+from aiprocessor import generate_aadhar_image
 
 def extract_details_from_prompt(prompt):
-    """
-    Extract name, DOB, and Aadhar number from natural language prompt.
-    
-    Args:
-        prompt: User's natural language prompt
-        
-    Returns:
-        Tuple containing (name, dob, aadhar_number)
-    """
     name = None
     dob = None
     aadhar_number = None
@@ -60,18 +51,6 @@ def extract_details_from_prompt(prompt):
     return name, dob, aadhar_number
 
 def generate_aadhar_card(prompt, generation_method="cv", apply_blur=False, blur_strength=2):
-    """
-    Process natural language prompt and generate modified Aadhar card.
-    
-    Args:
-        prompt: User's natural language prompt
-        generation_method: Method to use for generation ('cv' or 'ai')
-        apply_blur: Whether to apply blur effect to the image
-        blur_strength: Strength of the blur effect (1-5)
-        
-    Returns:
-        Path to the generated image or error message
-    """
     try:
         name, dob, aadhar_number = extract_details_from_prompt(prompt)
         
@@ -96,7 +75,8 @@ def generate_aadhar_card(prompt, generation_method="cv", apply_blur=False, blur_
         
         print("\n".join(details_message))
         
-        input_image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "aadharme.jpeg")
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        input_image_path = os.path.join(project_root, "aadharcardData", "original.jpg")
         output_image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generated_aadhar.jpg")
         
         if generation_method == "ai":
@@ -107,12 +87,7 @@ def generate_aadhar_card(prompt, generation_method="cv", apply_blur=False, blur_
             if aadhar_number:
                 ai_prompt += f" with ID number {aadhar_number}"
                 
-            result_path = generate_aadhar_image(
-                ai_prompt,
-                output_path=output_image_path,
-                apply_blur_effect=apply_blur,
-                blur_strength=blur_strength
-            )
+            result_path = generate_aadhar_image(ai_prompt,output_path=output_image_path,apply_blur_effect=apply_blur,blur_strength=blur_strength)
         else:
             print(f"Using CV-based generation method with blur={apply_blur}, blur_strength={blur_strength}")
             result_path = edit_aadhar(
@@ -134,43 +109,24 @@ def generate_aadhar_card(prompt, generation_method="cv", apply_blur=False, blur_
         return f"Error: {str(e)}"
 
 def setup_gradio_ui():
-    """
-    Set up and launch the Gradio UI.
-    """
     with gr.Blocks(title="Aadhar Card Generator") as demo:
         gr.Markdown("# Aadhar Card Digital Editor")
         gr.Markdown("""
         Enter a prompt describing the details for the Aadhar card.
         
-        Example: "Create a card with the name Vishwa and DOB 20/09/2003 and Aadhar number 7892 7654 1245"
+        Example: "Create a aadhar card with the name Vishwa and DOB 20/09/2003 and Aadhar number 7892 7654 1245"
         """)
         
         with gr.Row():
             with gr.Column(scale=2):
-                prompt_input = gr.Textbox(
-                    label="Prompt",
-                    placeholder="Create a card with the name..."
-                )
+                prompt_input = gr.Textbox(label="Prompt",placeholder="Create a card with the name...")
                 
                 with gr.Row():
-                    generation_method = gr.Radio(
-                        ["CV-based", "AI-based"],
-                        label="Generation Method",
-                        value="CV-based"
-                    )
+                    generation_method = gr.Radio(["CV-based", "AI-based"],label="Generation Method",value="CV-based")
                 
                 with gr.Row():
-                    apply_blur = gr.Checkbox(
-                        label="Apply Blur Effect",
-                        value=False
-                    )
-                    blur_strength = gr.Slider(
-                        minimum=0.5,
-                        maximum=5.0,
-                        step=0.5,
-                        value=2.0,
-                        label="Blur Strength"
-                    )
+                    apply_blur = gr.Checkbox(label="Apply Blur Effect",value=False)
+                    blur_strength = gr.Slider(minimum=0.5,maximum=5.0,step=0.5,value=2.0,label="Blur Strength")
                 
                 submit_btn = gr.Button("Generate Aadhar Card")
             
