@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Kailash Lal
+    - Gender: Male
+    - Date of Birth: 01/01/1956
+    - Aadhar Number: 2145 4975 6713
+    - VID Number: 9175 8533 7861 0048
+    - Issue Date: 25/07/2013
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

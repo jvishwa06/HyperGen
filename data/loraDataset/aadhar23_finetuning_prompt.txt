@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Alok Kumar Srivastava
+    - Gender: Male
+    - Date of Birth: 13/08/1978
+    - Aadhar Number: 5530 9042 4377
+    - VID Number: 55309042437789
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

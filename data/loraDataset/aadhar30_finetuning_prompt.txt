@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Savani Monika Digneshbhai
+    - Gender: FEMALE
+    - Date of Birth: 04/04/1995
+    - Aadhar Number: 2888 6761 6316
+    - VID Number: 288867616316
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

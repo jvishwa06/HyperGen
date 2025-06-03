@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Adiba Begum
+    - Gender: FEMALE
+    - Date of Birth: 10/04/1998
+    - Aadhar Number: 2264 2208 3397
+    - VID Number: 9102 1906 9977 2638
+    - Issue Date: 30/09/2011
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

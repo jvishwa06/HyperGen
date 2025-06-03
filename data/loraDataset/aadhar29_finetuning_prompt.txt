@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Rajesh Kumar Prajapati
+    - Gender: Male
+    - Date of Birth: 01/01/1974
+    - Aadhar Number: 9480 3238 2845
+    - VID Number: 94803238284500
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

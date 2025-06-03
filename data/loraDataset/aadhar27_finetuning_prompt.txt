@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Amit Mishra
+    - Gender: Male
+    - Date of Birth: 30/07/1995
+    - Aadhar Number: 5884 1016 3354
+    - VID Number: 588410163354
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: MERAJ KHAN
+    - Gender: Male
+    - Date of Birth: 12/12/1988
+    - Aadhar Number: 2943 6593 3461
+    - VID Number: 294365933461
+    - Issue Date: 12/12/2023
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

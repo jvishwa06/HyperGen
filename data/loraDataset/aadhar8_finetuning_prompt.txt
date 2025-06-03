@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Sriram Mamundi
+    - Gender: MALE
+    - Date of Birth: 11/04/1992
+    - Aadhar Number: 8416 1590 3267
+    - VID Number: 841615903267
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

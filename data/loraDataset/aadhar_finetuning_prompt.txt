@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Akash Varma
+    - Gender: Male
+    - Date of Birth: 01/04/1982
+    - Aadhar Number: 8938 7461 8710
+    - VID Number: 893874618710
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

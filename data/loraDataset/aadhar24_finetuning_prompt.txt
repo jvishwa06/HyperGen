@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Sunil Rajendra Yadav
+    - Gender: Male
+    - Date of Birth: 21/06/1999
+    - Aadhar Number: 6310 2407 7955
+    - VID Number: 6310240779550001
+    - Issue Date: DD/MM/YYYY
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

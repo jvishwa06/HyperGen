@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Prashant Kumar
+    - Gender: Male
+    - Date of Birth: 13/06/1980
+    - Aadhar Number: 5329 4926 6794
+    - VID Number: 532949266794
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

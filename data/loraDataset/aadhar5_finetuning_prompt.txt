@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Ajay Kumar
+    - Gender: Male
+    - Date of Birth: 02/02/1989
+    - Aadhar Number: 8861 4636 1277
+    - VID Number: 88614636127700
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Sajid Ansari
+    - Gender: MALE
+    - Date of Birth: 13/12/2003
+    - Aadhar Number: 5767 1343 2793
+    - VID Number: 9193 6823 8455 7930
+    - Issue Date: 25/01/2015
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

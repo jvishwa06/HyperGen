@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Suyash Sanjay Deore
+    - Gender: Male
+    - Date of Birth: 14/04/2003
+    - Aadhar Number: 230425159949
+    - VID Number: 230425159949
+    - Issue Date: 25/06/2013
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    
