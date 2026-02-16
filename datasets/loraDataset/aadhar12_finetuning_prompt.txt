@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Karan Paswan
+    - Gender: Male
+    - Date of Birth: 15/05/2003
+    - Aadhar Number: 8676 8470 2652
+    - VID Number: 8676847026520001
+    - Issue Date: DD/MM/YYYY
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

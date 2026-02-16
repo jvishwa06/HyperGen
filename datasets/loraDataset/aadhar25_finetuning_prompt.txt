@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Pravesh Yadav
+    - Gender: Male
+    - Date of Birth: 28/01/2001
+    - Aadhar Number: 410221209246
+    - VID Number: 41022120924600
+    - Issue Date: DD/MM/YYYY
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

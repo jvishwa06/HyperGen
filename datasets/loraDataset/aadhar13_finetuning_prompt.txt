@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Subhash Singh
+    - Gender: Male
+    - Date of Birth: 05/04/2005
+    - Aadhar Number: 4422 0594 6619
+    - VID Number: 4422 0594 6619 0000
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: BINOD
+    - Gender: MALE
+    - Date of Birth: 07/08/2020
+    - Aadhar Number: 0000 1111 2222
+    - VID Number: 0000 1111 2222
+    - Issue Date: DD/MM/YYYY
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

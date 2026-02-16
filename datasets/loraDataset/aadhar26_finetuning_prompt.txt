@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Dinesh Kumar Ravat
+    - Gender: Male
+    - Date of Birth: 10/05/1991
+    - Aadhar Number: 3711 8909 4632
+    - VID Number: 9156 3180 2900 0624
+    - Issue Date: Not specified
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Ashish Kumar Sharma
+    - Gender: Male
+    - Date of Birth: 17/04/1989
+    - Aadhar Number: 7244 9436 8865
+    - VID Number: 9126 9451 4278 0792
+    - Issue Date: 16/04/2013
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

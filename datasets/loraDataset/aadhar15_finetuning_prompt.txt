@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Mohd Sharukh
+    - Gender: Male
+    - Date of Birth: 13/03/1996
+    - Aadhar Number: 4551 5893 7035
+    - VID Number: 9163 9129 2464 5515
+    - Issue Date: 07/02/2014
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

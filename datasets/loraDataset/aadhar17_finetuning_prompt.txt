@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Mohan Lal Keshari
+    - Gender: Male
+    - Date of Birth: 01/07/1963
+    - Aadhar Number: 7885 5255 2721
+    - VID Number: 89012345678901
+    - Issue Date: DD/MM/YYYY
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

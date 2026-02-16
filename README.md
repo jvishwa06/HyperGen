@@ -55,14 +55,88 @@ HyperGen/
 └── README.md         # This file
 ```
 
-## Examples
+## Examples & Output Gallery
 
-The `ImageGenResults` directory contains sample outputs from different generation methods:
+The following showcase sample outputs from different generation methods:
 
-- **DigitalEditsOpenCV.jpg**: Traditional CV-based approach
-- **StableDiffusion3.5LargewithControlNet.jpeg**: SD 3.5 with ControlNet
-- **SD3.5LargewithControlNetwithPromptEnhance.jpeg**: Enhanced prompt engineering
-- **FluxLoRAFinetuned.png**: Results from fine-tuned LoRA model
+### Original Reference
+
+<div align="center">
+  <img src="images/Original.jpg" alt="Original Aadhar Card" width="400" style="border-radius: 8px; margin: 15px;">
+</div>
+
+### OpenCV-based CV Processing
+
+<div align="center">
+  <img src="images/DigitalEditsOpenCV.jpg" alt="DigitalEditsOpenCV" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>Traditional CV-based approach using OpenCV and image editing</strong></p>
+</div>
+
+### Stable Diffusion 3.5 Large Results
+
+<div align="center">
+  <img src="images/SD3.5Large.jpeg" alt="SD3.5Large" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>SD 3.5 Large - Base generation</strong></p>
+</div>
+
+### Stable Diffusion 3.5 with ControlNet
+
+<div align="center">
+  <img src="images/StableDiffusion3.5LargewithControlNet.jpeg" alt="StableDiffusion3.5LargewithControlNet" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>SD 3.5 Large with ControlNet for better structure control</strong></p>
+</div>
+
+### Enhanced with Prompt Engineering
+
+<div align="center">
+  <img src="images/SD3.5LargewithControlNetwithPromptEnhance.jpeg" alt="SD3.5LargewithControlNetwithPromptEnhance" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>SD 3.5 Large with ControlNet + Advanced Prompt Enhancement</strong></p>
+</div>
+
+### Flux.1 Dev LoRA Fine-tuned Results
+
+<div align="center">
+  <img src="images/FluxLoRAFinetuned.jpeg" alt="FluxLoRAFinetuned" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>Flux.1 Dev with fine-tuned LoRA model - JPEG version</strong></p>
+</div>
+
+<div align="center">
+  <img src="images/FluxLoRAFinetuned.png" alt="FluxLoRAFinetunedPNG" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>Flux.1 Dev with fine-tuned LoRA model - PNG version</strong></p>
+</div>
+
+### Flux.1 LoRA with Image Conditioning
+
+#### Conditioning Set 1
+
+<div align="center">
+  <img src="images/FluxLoRAFinetunedwithIC1.jpeg" alt="FluxLoRAFinetunedwithIC1" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>Flux.1 LoRA Fine-tuned with Image Conditioning - Set 1</strong></p>
+</div>
+
+#### Conditioning Set 2
+
+<div align="center">
+  <img src="images/FluxLoRAFinetunedwithIC2.jpeg" alt="FluxLoRAFinetunedwithIC2" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>Flux.1 LoRA Fine-tuned with Image Conditioning - Set 2</strong></p>
+</div>
+
+#### Conditioning Set 3
+
+<div align="center">
+  <img src="images/FluxLoRAFinetunedwithIC3.jpeg" alt="FluxLoRAFinetunedwithIC3" width="400" style="border-radius: 8px; margin: 15px;">
+  <p><strong>Flux.1 LoRA Fine-tuned with Image Conditioning - Set 3</strong></p>
+</div>
+
+### Generation Method Comparison
+
+| Method | Quality | Speed | Realism | Best For |
+|--------|---------|-------|---------|----------|
+| OpenCV | Medium | Very Fast | Moderate | Quick edits, templates |
+| SD 3.5 Large | High | Medium | Very High | Detailed generation |
+| SD 3.5 + ControlNet | Very High | Medium-Slow | Excellent | Structured layouts |
+| Flux.1 + LoRA | Excellent | Fast | Superior | Fine-tuned outputs |
+| Flux.1 + IC | Outstanding | Medium | Best | Conditional generation |
 
 ## Disclaimer
 

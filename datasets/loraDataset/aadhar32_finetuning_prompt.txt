@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Maynal Haque
+    - Gender: Male
+    - Date of Birth: 02/05/1993
+    - Aadhar Number: 4070 6448 0305
+    - VID Number: 9101 3510 3607 8328
+    - Issue Date: 24/06/2021
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

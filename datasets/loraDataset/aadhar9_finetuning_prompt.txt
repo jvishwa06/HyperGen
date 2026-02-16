@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Sid Malhorta
+    - Gender: Female
+    - Date of Birth: 28/05/2000
+    - Aadhar Number: 3425 0653 1151
+    - VID Number: 3425 0653 1151 1234
+    - Issue Date: DD/MM/YYYY
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

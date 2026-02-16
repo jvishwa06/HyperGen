@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Vipin Gupta
+    - Gender: Male
+    - Date of Birth: 15/10/1996
+    - Aadhar Number: 422130389207
+    - VID Number: 42213038920742
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

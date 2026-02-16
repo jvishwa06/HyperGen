@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Adarsh Kumar
+    - Gender: Male
+    - Date of Birth: 17/06/1995
+    - Aadhar Number: 095237614258
+    - VID Number: 0952376142580001
+    - Issue Date: Not provided
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    

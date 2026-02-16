@@ -1,0 +1,12 @@
+
+    Generate an image of an Aadhar card with the following details:
+
+    - Name: Himadri
+    - Gender: FEMALE
+    - Date of Birth: 02/02/2006
+    - Aadhar Number: 9257 8478 4692
+    - VID Number: 9159 6542 3575 2553
+    - Issue Date: 30/07/2019
+
+    The generated image should closely match the description, reflecting the given personal details and the typical look of an Aadhar card.
+    
